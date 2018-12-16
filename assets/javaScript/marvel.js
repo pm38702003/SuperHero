@@ -31,31 +31,29 @@
       console.log(comicLink) //comiclink url, this is a cool site              
       
       //image url
-      var thumbnail = superHeroObject.thumbnail.path + "."  + superHeroObject.thumbnail.extension;
-      console.log(thumbnail) 
-
+      var thumbnail = console.log(superHeroObject.thumbnail.path + "."  + superHeroObject.thumbnail.extension);
+      console.log(comicLink) 
+       
       var p = $("<p>");
-      p.text("Name--> " + superHeroObject.name);  
+      p.text(superHeroObject.name);  
       $("#sample-view").append(p);
 
       var p1 = $("<p>");
-      p1.text("Description--> " + superHeroObject.description);
+      p1.text(superHeroObject.description);
       $("#sample-view").append(p1);
 
       var p2 = $("<p>");
-      p2.text("Comiclink--> " + comicLink);
+      p2.text(comicLink);
       $("#sample-view").append(p2);
       
       var p3 = $("<p>");
-      p3.text("Thumbnail--> " + thumbnail)
+      p3.text(thumbnail)
       $("#sample-view").append(p3)
-
-
-
-
-
         
     }).then(function (response) {
+      
+      alert("make second call")
+      
       // this is where we call the second API,  I havent test this but i think this is where we would do it...
       // we can also add some error handling a bit later to handle failed calls to API
     })
